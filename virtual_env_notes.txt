@@ -1,0 +1,26 @@
+$ pip install virtualenv 				# Installs the package used to create a virtual python environment
+$ pip list 						# See a ton of global packages on your system
+$ mkdir Environments 					# Creates a new folder in your User directory called ‘Environments’
+$ cd !$ 						# Changes your current directory to the ‘Environments’ folder
+$ ls 							# Lists out everything in your current directory (Environments folder)
+$ virtualenv project1_env 				# Creates a virtual environment called ‘project1_env’ within the folder you navigated to
+$ source project1_env/bin/activate			# Activates the virtual environment created. On windows use—> ‘project1_env\Scripts\activate’
+							# 	you should see (project1_env) once you are inside the virtual environment
+$ which python 						# Location of python. On windows ‘which’ —> ‘where’
+$ which pip 						# Location of pip. On windows ‘which’ —> ‘where’
+$ pip list 						# Shows the packages installed in the virtual environment
+							# 	now pip install gives you local package installations
+$ pip freeze --local > requirements.txt 		# Saves all of the packages installed in the virtual environment and their versions as a text file
+$ cat requirements.txt 					# Shows all the packages within ‘requirements.txt’. On windows ‘cat’—>’type’
+$ deactivate 						# Exits the virtual environment. On windows may have to use—> ‘project1_env\Scripts\deactivate’
+$ cd							# Move up exactly one level to exit the ‘Environments’ directory
+$ rm -rf project1_env/					# Deletes the virtual environment
+$ virtualenv -p /usr/bin/python2.6 py26_env		# Creates a virtual environment with a specific python version (2.6 shown here), named py26_env
+$ pip install -r requirements.txt			# Installs the required packages in the new python environment
+$ python —version					# Tells you which python version you are working with
+$ python my_script.py					# Runs your code from the virtual environment (probably have to have the script in the same
+							# 	folder as the virtual environment unless you specify full path)
+
+		# NOTE: don’t put any project files within your virtual environment. The virtual environment should be
+		# able to be readily deleted.
+		# “https://www.youtube.com/watch?v=N5vscPTWKOk” for details
